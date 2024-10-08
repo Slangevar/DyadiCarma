@@ -1,0 +1,6 @@
+# Ignore R cache
+**/.RData
+**/.Rhistory
+**/.Rproj.user/
+**/.Rbuildignore
+**/.vscode
