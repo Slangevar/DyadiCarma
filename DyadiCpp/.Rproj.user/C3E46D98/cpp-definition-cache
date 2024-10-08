@@ -1,0 +1,19 @@
+[
+    {
+        "file": "/Users/mats-ksp/Library/CloudStorage/Box-Box/Shared/Hanqing/SparseMatrices/Programming/DyadicPackage/DyadiCpp/src/fun_rcpp_constr.cpp",
+        "file_last_write": 1725979482.0,
+        "definitions": [
+            {
+                "usr": "c:@F@rcpp_constr#I#I#$@N@Rcpp@S@String#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "rcpp_constr(int, int, String, NumericVector)",
+                "file": "/Users/mats-ksp/Library/CloudStorage/Box-Box/Shared/Hanqing/SparseMatrices/Programming/DyadicPackage/DyadiCpp/src/fun_rcpp_constr.cpp",
+                "line": 22,
+                "column": 6,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    }
+]

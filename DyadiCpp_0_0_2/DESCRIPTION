@@ -1,0 +1,14 @@
+Package: DyadiCpp
+Date: 2024-10-08
+Type: Package
+Title: Dyadic matrices and their algebra
+Version: 0.0.2
+Authors@R: c(person("Michal", "Kos", role = "aut",email = "Michal.Kos@stat.lu.se"), person("Krzysztof", "Podgorski", role = c("aut","cre","cph"), email = "Krzysztof.Podgorski@stat.lu.se"),person("Hanqing", "Wu", role = "aut",email = "Hanging.Wu@stat.lu.se"))
+Description: Algebra of dyadic matrices.
+Depends: R (>= 4.3.2), methods
+License: GPL (>= 2)
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Imports: Rcpp (>= 1.0.12), RcppArmadillo (>= 14.0.2)
+LinkingTo: Rcpp, RcppArmadillo
+NeedsCompilation: yes
