@@ -1,0 +1,11 @@
+useDynLib(DyadiCarma, .registration=TRUE)
+# exportPattern("^[[:alpha:]]+")
+export(construct)
+export(dyadalg)
+export(as.dyadic)
+exportMethods(as.matrix)
+exportMethods(t)
+importFrom(Rcpp,evalCpp)
+importFrom(methods,callNextMethod)
+importFrom(methods,new)
+
