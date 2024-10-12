@@ -1,4 +1,4 @@
-# DyadCarma
+# DyadiCarma
 
 ## Configuration of the NAMESPACE
 
