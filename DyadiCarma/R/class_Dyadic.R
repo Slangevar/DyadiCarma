@@ -37,7 +37,7 @@
 #' @importFrom methods callNextMethod new
 #' @importFrom Rcpp evalCpp
 
-
+#' @export
 setClass(
     "Dyadic",
     representation(
@@ -90,3 +90,19 @@ setMethod("initialize", "Dyadic", function(.Object, ...) { # This will be used f
     .Object
 })
 
+#' @export
+
+setMethod(
+    f = "-",
+    signature = "Dyadic",
+    definition = function(e1) {
+        e2 <- e1
+        entries <- e1@entries
+        for (i in seq_along(entries)) {
+            entries[[i]] <- -entries[[i]]
+        }
+        e2@entries <- entries
+
+        return(e2)
+    }
+)
