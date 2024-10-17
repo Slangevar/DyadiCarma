@@ -11,25 +11,25 @@ construct(height, breadth, type = "vert", distr = "nonrand", param = c(0, 1))
 
 \item{breadth}{positive integer, the breadth of the dyadic structure;}
 
-\item{type}{string, one of the following character strings: 
+\item{type}{string, one of the following character strings:
 \code{horiz},\code{vert},\code{symm}, \code{asymm}, which indicates the type of dyadic matrix;}
 
-\item{rnd}{string, if it is one the strings 'binom', 'unif', 'norm' it indicate 
-the type of the distribution used for obtaining the entries, any other string, for example 'nonrand', results in 
+\item{distr}{string, if it is one the strings 'binom', 'unif', 'norm' it indicate
+the type of the distribution used for obtaining the entries, any other string, for example 'nonrand', results in
 non-random 1's in all entries.}
 
-\item{par}{vector of two numeric values, these are parameters for the distributions used to generate
+\item{param}{vector of two numeric values, these are parameters for the distributions used to generate
 the entries.}
 }
 \value{
 A \code{Dyadic}-object.
 }
 \description{
-The function constructs a \code{Dyadic} object either 
+The function constructs a \code{Dyadic} object either
 with random entries (default) or with entries equal to one.
 }
 \details{
-The function constructs a generic \code{Dyadic}-object of any type and 
+The function constructs a generic \code{Dyadic}-object of any type and
 in the case of the \code{symm} type with random entries the object represents a symmetric matrix.
 }
 \section{References}{

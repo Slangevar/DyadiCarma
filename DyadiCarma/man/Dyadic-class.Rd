@@ -53,7 +53,7 @@ Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
 
 \examples{
 #-------------------------------------------------------------#
-#-------Generating an object from the class 'Dyadic'--------#
+#------- Generating an object from the 'Dyadic' class --------#
 #-------------------------------------------------------------#
 
 # The most generic generation of an object of class 'Dyadic':
