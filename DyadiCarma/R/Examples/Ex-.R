@@ -2,6 +2,9 @@
 #------- Subtraction of dyadic objects --------#
 #----------------------------------------------#
 
+N <- 4
+k <- 3
+
 # Construct four types of dyadic matrices with made of 1's
 V <- construct(N, k, type = "vert") # vertical
 H <- construct(N, k, type = "horiz") # horizontal
@@ -16,7 +19,5 @@ mat_AS <- as.matrix(AS)
 
 # Subtract two dyadic matrices
 
-NV=-V # negative of vertical
-HpAS=3*t(H)-6*t(AS) #transpose and linear combination
-HpAS@type #check the type of the result
-
+HpAS <- 3 * t(H) - 6 * t(AS) # transpose and linear combination
+HpAS@type # check the type of the result

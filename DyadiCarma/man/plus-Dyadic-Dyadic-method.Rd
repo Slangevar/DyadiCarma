@@ -30,6 +30,9 @@ Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
 #------- Algebraic operations on dyadic matrices --------#
 #--------------------------------------------------------#
 
+N <- 4
+k <- 3
+
 # Construct four types of dyadic matrices with made of 1's
 V <- construct(N, k, type = "vert") # vertical
 H <- construct(N, k, type = "horiz") # horizontal
@@ -38,13 +41,11 @@ AS <- construct(N, k, type = "asymm") # asymmetric
 
 # Addition of dyadic matrices
 
-HpV=H+2*V # horizontal + vertical = asymmetric
+HpV <- H + 2 * V # horizontal + vertical = asymmetric
 HpV@type
-HpAS=3*t(H)-6*t(AS) #transpose and linear combination
-
-
+HpAS <- 3 * t(H) - 6 * t(AS) # transpose and linear combination
 }
 \seealso{
 \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;
-\code{\link{dyadalg}} for the dyadic decomposition of dyadic matrices;
+\code{\link{dyadFac}} for the dyadic decomposition of dyadic matrices;
 }

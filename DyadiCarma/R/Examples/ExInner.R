@@ -2,6 +2,9 @@
 #------- Multiplication of dyadic matrices --------#
 #--------------------------------------------------#
 
+N <- 4
+k <- 3
+
 # Construct four types of dyadic matrices with made of 1's
 V <- construct(N, k, type = "vert") # vertical
 H <- construct(N, k, type = "horiz") # horizontal
@@ -29,4 +32,4 @@ SS <- S %*% S # symmetric * symmetric = non-dyadic
 ASAS <- AS %*% AS # asymmetric * asymmetric = non-dyadic
 ASH <- AS %*% H # asymmetric * horizontal = non-dyadic
 
-dim(ASAS) #regular matrix
+dim(ASAS) # regular matrix

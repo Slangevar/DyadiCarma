@@ -18,13 +18,13 @@ matS
 
 # Find the vertically dyadic matrix that satisfies P^T S P = I
 # using a dyadic factorization algorithm.
-P <- dyadalg(S)
+P <- dyadFac(S)
 I1 <- as.matrix(t(P) %*% S %*% P)
 I <- diag(dim(I1)[1])
 max(abs(I1 - I)) # Should be trivially small
 
 # Obtain the inverse of S via the dyadic algorithm
-iS <- dyadalg(S, inv = TRUE)
+iS <- dyadFac(S, inv = TRUE)
 I2 <- iS %*% matS
 max(abs(I2 - I)) # Should be trivially small
 
@@ -42,14 +42,14 @@ matB <- t(half_B) %*% half_B # matB is a PD band matrix with half bandwidth 3.
 
 # Convert matB into a dyadic object B
 B <- as.dyadic(matB, "symm", N, k)
-iB <- dyadalg(B, inv = TRUE)
+iB <- dyadFac(B, inv = TRUE)
 I <- diag(dim(matB)[1])
 max(abs(iB %*% matB - I)) # Should be trivially small
 
-iB_band <- dyadalg(B, inv = TRUE, band = TRUE)
+iB_band <- dyadFac(B, inv = TRUE, band = TRUE)
 max(abs(iB_band %*% matB - I)) # Should be trivially small
 
-iB <- dyadalg(B)
-iB_band <- dyadalg(B, band = TRUE)
+iB <- dyadFac(B)
+iB_band <- dyadFac(B, band = TRUE)
 
 max(abs(as.matrix(iB) - as.matrix(iB_band))) # Should be trivially small

@@ -57,7 +57,7 @@ rcpp_constr <- function(height, breadth, distr, param) {
     .Call(`_DyadiCarma_rcpp_constr`, height, breadth, distr, param)
 }
 
-rcpp_dyadalg_core <- function(entries, N, k) {
-    .Call(`_DyadiCarma_rcpp_dyadalg_core`, entries, N, k)
+rcpp_dyadFac_core <- function(entries, N, k) {
+    .Call(`_DyadiCarma_rcpp_dyadFac_core`, entries, N, k)
 }
 

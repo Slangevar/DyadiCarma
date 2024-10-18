@@ -30,10 +30,9 @@
 #' with the initialization of the default values for the fields.
 #' @section References:
 #' Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
-#' @seealso \code{\link{plot,Dyadic-method}} for plotting methods for \code{Dyadic}-objects;
 #'
 #' @example R/Examples/ExDyadicObject.R
-#' @useDynLib DyadiCpp, .registration=TRUE
+#' @useDynLib DyadiCarma, .registration=TRUE
 #' @importFrom methods callNextMethod new
 #' @importFrom Rcpp evalCpp
 
@@ -77,7 +76,7 @@ setMethod("initialize", "Dyadic", function(.Object, ...) { # This will be used f
     if (.Object@type == "asymm") {
         for (l in 1:N) {
             if ((2^(l) - 1) * k != dim(.Object@aentries[[l]])[1]) {
-                stop(paste("The", i, "th element in SLOT 'aentries' should have ", (2^l - 1) * k, " rows\n"))
+                stop(paste("The", l, "th element in SLOT 'aentries' should have ", (2^l - 1) * k, " rows\n"))
             }
             if (2^(N - l) * k != dim(.Object@aentries[[l]])[2]) {
                 stop(paste("The", l, "th element in SLOT 'aentries' should have ", 2^(N - l) * k, " columns\n"))
@@ -89,20 +88,3 @@ setMethod("initialize", "Dyadic", function(.Object, ...) { # This will be used f
     }
     .Object
 })
-
-#' @export
-
-setMethod(
-    f = "-",
-    signature = "Dyadic",
-    definition = function(e1) {
-        e2 <- e1
-        entries <- e1@entries
-        for (i in seq_along(entries)) {
-            entries[[i]] <- -entries[[i]]
-        }
-        e2@entries <- entries
-
-        return(e2)
-    }
-)

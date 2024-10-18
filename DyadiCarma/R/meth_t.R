@@ -9,7 +9,7 @@
 #'
 #' @seealso
 #' \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;
-#' \code{\link{dyadalg}} for the dyadic decomposition of dyadic matrices;
+#' \code{\link{dyadFac}} for the dyadic decomposition of dyadic matrices;
 #'
 #' @example R/Examples/ExT.R
 #'
@@ -19,9 +19,6 @@
 
 
 # Transpose the Dyadic object.
-# setGeneric("t", function(x) standardGeneric("t"), signature = "x")
-# setGeneric("t", function(x) standardGeneric("t"))
-#' @export
 setMethod(
     "t",
     "Dyadic",
@@ -43,4 +40,3 @@ setMethod(
         return(result)
     }
 )
-

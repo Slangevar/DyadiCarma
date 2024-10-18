@@ -1,7 +1,7 @@
 #include "fun_aux.h"
 
 // [[Rcpp::export]]
-List rcpp_dyadalg_core(List entries, int N, int k) {
+List rcpp_dyadFac_core(List entries, int N, int k) {
     // The input is a symmetrically dyadic matrix H, and the output is a
     // vertically dyadic matrix P where P^T H P = I.
 

@@ -15,7 +15,7 @@
 The \code{Dyadic}-object that is the result of the subtraction.
 }
 \description{
-The subtraction  of dyadic objects.
+The subtraction of dyadic objects.
 }
 \details{
 The operations are performed in a way that is consistent with the dyadic structure of the matrices.
@@ -29,6 +29,9 @@ Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
 #----------------------------------------------#
 #------- Subtraction of dyadic objects --------#
 #----------------------------------------------#
+
+N <- 4
+k <- 3
 
 # Construct four types of dyadic matrices with made of 1's
 V <- construct(N, k, type = "vert") # vertical
@@ -44,12 +47,10 @@ mat_AS <- as.matrix(AS)
 
 # Subtract two dyadic matrices
 
-NV=-V # negative of vertical
-HpAS=3*t(H)-6*t(AS) #transpose and linear combination
-HpAS@type #check the type of the result
-
+HpAS <- 3 * t(H) - 6 * t(AS) # transpose and linear combination
+HpAS@type # check the type of the result
 }
 \seealso{
 \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;
-\code{\link{dyadalg}} for the dyadic decomposition of dyadic matrices;
+\code{\link{dyadFac}} for the dyadic decomposition of dyadic matrices;
 }

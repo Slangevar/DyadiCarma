@@ -29,6 +29,9 @@ Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
 #------- Matrix representation of dyadic objects --------#
 #--------------------------------------------------------#
 
+N <- 4
+k <- 3
+
 # Construct four types of dyadic matrices with made of 1's
 V <- construct(N, k, type = "vert") # vertical
 H <- construct(N, k, type = "horiz") # horizontal
@@ -43,5 +46,5 @@ mat_AS <- as.matrix(AS)
 }
 \seealso{
 \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;
-\code{\link{dyadalg}} for the dyadic decomposition of dyadic matrices;
+\code{\link{dyadFac}} for the dyadic decomposition of dyadic matrices;
 }

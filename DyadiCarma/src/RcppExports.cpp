@@ -219,16 +219,16 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_dyadalg_core
-List rcpp_dyadalg_core(List entries, int N, int k);
-RcppExport SEXP _DyadiCarma_rcpp_dyadalg_core(SEXP entriesSEXP, SEXP NSEXP, SEXP kSEXP) {
+// rcpp_dyadFac_core
+List rcpp_dyadFac_core(List entries, int N, int k);
+RcppExport SEXP _DyadiCarma_rcpp_dyadFac_core(SEXP entriesSEXP, SEXP NSEXP, SEXP kSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< List >::type entries(entriesSEXP);
     Rcpp::traits::input_parameter< int >::type N(NSEXP);
     Rcpp::traits::input_parameter< int >::type k(kSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_dyadalg_core(entries, N, k));
+    rcpp_result_gen = Rcpp::wrap(rcpp_dyadFac_core(entries, N, k));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -248,7 +248,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_DyadiCarma_rcpp_as_matrix", (DL_FUNC) &_DyadiCarma_rcpp_as_matrix, 5},
     {"_DyadiCarma_rcpp_bandalg_core", (DL_FUNC) &_DyadiCarma_rcpp_bandalg_core, 3},
     {"_DyadiCarma_rcpp_constr", (DL_FUNC) &_DyadiCarma_rcpp_constr, 4},
-    {"_DyadiCarma_rcpp_dyadalg_core", (DL_FUNC) &_DyadiCarma_rcpp_dyadalg_core, 3},
+    {"_DyadiCarma_rcpp_dyadFac_core", (DL_FUNC) &_DyadiCarma_rcpp_dyadFac_core, 3},
     {NULL, NULL, 0}
 };
 

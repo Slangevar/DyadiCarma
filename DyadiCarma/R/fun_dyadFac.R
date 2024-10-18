@@ -20,10 +20,10 @@
 #' @export
 #'
 #' @seealso \code{\link{Dyadic-class}} for a description of the class;
-#' @example R/Examples/ExDyadalg.R
+#' @example R/Examples/ExdyadFac.R
 #'
 
-dyadalg <- function(S, inv = FALSE, band = FALSE) {
+dyadFac <- function(S, inv = FALSE, band = FALSE) {
     if (class(S)[1] != "Dyadic") {
         stop(paste("The argument does not belong to the Dyadic-class.\n"))
     }
@@ -37,7 +37,7 @@ dyadalg <- function(S, inv = FALSE, band = FALSE) {
     if (band) {
         P <- new("Dyadic", height = N, breadth = k, type = "vert", entries = rcpp_bandalg_core(S@entries, N, k))
     } else {
-        P <- new("Dyadic", height = N, breadth = k, type = "vert", entries = rcpp_dyadalg_core(S@entries, N, k))
+        P <- new("Dyadic", height = N, breadth = k, type = "vert", entries = rcpp_dyadFac_core(S@entries, N, k))
     }
 
 
