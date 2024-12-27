@@ -206,7 +206,7 @@ void symm_arith_helper(vector<mat>& matrices, int N, int k) {
     }
 }
 
-void symm_convert(vector<mat>& matrices, int N, int k) {
+void symm_convert(std::vector<arma::mat>& matrices, int N, int k) {
     // Complete the whole symmetric central block
     for (int i = 0; i < N; i++) {
         int row_id = ((1 << i) - 1) * k;
@@ -221,8 +221,9 @@ void symm_convert(vector<mat>& matrices, int N, int k) {
     }
 }
 
-void symm_read_helper(vector<mat>& matrices, int N, int k) {
-    // Extract only the upper diagonal terms.
+void symm_read_helper(std::vector<arma::mat>& matrices, int N, int k) {
+    // Extract only the upper diagonal terms from the central block of a
+    // symmetrically dyadic matrix.
     for (int i = 0; i < N; i++) {
         int row_id = ((1 << i) - 1) * k;
         for (int j = 0; j < (1 << (N - i - 1)); j++) {
@@ -259,8 +260,8 @@ void asymm_convert(vector<mat>& matrices, vector<mat>& amatrices, int N,
     }
 }
 
-void asymm_read_helper(vector<mat>& matrices, vector<mat>& amatrices, int N,
-                       int k) {
+void asymm_read_helper(std::vector<arma::mat>& matrices,
+                       std::vector<arma::mat>& amatrices, int N, int k) {
     for (int i = 0; i < N; i++) {
         int row_id = ((1 << i) - 1) * k;
         for (int j = 0; j < (1 << (N - i - 1)); j++) {
@@ -631,6 +632,7 @@ arma::mat multiply_sas(List l_entries, List l_aentries, List r_entries,
 
 // [[Rcpp::export]]
 List asymm_trans(List entries, List aentries, int N, int k) {
+    // Transpose of the asymmetrically dyadic matrix.
     vector<mat> matrices(N);
     vector<mat> amatrices(N);
 

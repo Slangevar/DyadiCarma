@@ -48,7 +48,7 @@ The terms above and on the diagonal in the diagonal blocks are set to zero becau
 
 \section{References}{
 
-Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
+Kos, M., Podgórski, K., & Wu, H. (2024). Efficient inversion of sparse positive definite matrices through a dyadic factorization. Manuscript in preparation.
 }
 
 \examples{

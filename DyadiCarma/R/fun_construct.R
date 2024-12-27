@@ -22,7 +22,8 @@
 #' @example R/Examples/ExConstruct.R
 #'
 #'
-construct <- function(height, breadth, type = "vert", distr = "nonrand", param = c(0, 1)) {
+construct <- function(
+    height, breadth, type = "vert", distr = "nonrand", param = c(0, 1)) {
     # Building 'entries'
     EE <- rcpp_constr(height, breadth, distr, param)
     if (type == "symm" || type == "asymm") { # the case of symmetrically dyadic symmetric matrix,

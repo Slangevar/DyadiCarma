@@ -12,7 +12,7 @@
 #' \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;
 #' \code{\link{dyadFac}} for the dyadic decomposition of dyadic matrices;
 #'
-#' @example R/Examples/ExAs_matrix.R
+#' @example R/Examples/ExAsMatrix.R
 #'
 #'
 #' @export

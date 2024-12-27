@@ -6,13 +6,21 @@
 #include <cmath>
 #include <queue>
 
+using arma::distr_param;
 using arma::mat;
+using arma::ones;
 using arma::subview;
 using arma::zeros;
 using Rcpp::as;
+using Rcpp::Dimension;
 using Rcpp::List;
 using Rcpp::Named;
 using Rcpp::NumericMatrix;
+using Rcpp::NumericVector;
+using Rcpp::rbinom;
+using Rcpp::rnorm;
+using Rcpp::runif;
+using Rcpp::String;
 using Rcpp::wrap;
 using std::invalid_argument;
 using std::make_pair;

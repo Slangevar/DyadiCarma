@@ -13,10 +13,8 @@
 #'
 #' @example R/Examples/ExT.R
 #'
-#'
 #' @export
 #'
-
 
 # Transpose the Dyadic object.
 setMethod(

@@ -10,9 +10,8 @@ V <- construct(N, k, type = "vert") # vertical
 H <- construct(N, k, type = "horiz") # horizontal
 S <- construct(N, k, type = "symm", distr = "unif") # symmetric
 
+t(V)@type # The transpose of a vertical dyadic matrix is horizontal
+t(H)@type # The transpose of a horizontal dyadic matrix is vertical
 
-V@type
-H@type
-t(H)@type
-as.matrix(S)
-as.matrix(t(S))
+as.matrix(t(V)) == t(as.matrix(V)) # Should be TRUE
+as.matrix(S) == as.matrix(t(S)) # Should be TRUE

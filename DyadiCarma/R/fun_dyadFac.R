@@ -10,7 +10,8 @@
 #' \eqn{\boldsymbol \Sigma} should be returned.
 #' @param band The boolean value indicating whether the input S is a band
 #' matrix. If TRUE, then a optimized band-focused algorithm is called.
-#' If band==TRUE, but the input matrix is not a band matrix
+#' If band==TRUE, but the input matrix is not a band one, the function will
+#' return the corresponding result for the band part of the input matrix.
 #' @return If \code{inv == TRUE}, then the inverse of \eqn{\boldsymbol \Sigma},
 #' which is a \code{(2^(height)-1)*breadth x (2^(height)-1)*breadth} classic
 #' matrix, is returned. Otherwise, the vertically \code{Dyadic} object for

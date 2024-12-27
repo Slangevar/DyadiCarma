@@ -29,8 +29,7 @@
 #' @return running \code{new("Dyadic")} return an object that belongs to the class \code{Dyadic},
 #' with the initialization of the default values for the fields.
 #' @section References:
-#' Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
-#'
+#' Kos, M., Podgórski, K., & Wu, H. (2024). Efficient inversion of sparse positive definite matrices through a dyadic factorization. Manuscript in preparation.
 #' @example R/Examples/ExDyadicObject.R
 #' @useDynLib DyadiCarma, .registration=TRUE
 #' @importFrom methods callNextMethod new

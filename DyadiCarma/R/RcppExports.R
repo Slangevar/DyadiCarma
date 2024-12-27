@@ -53,8 +53,8 @@ rcpp_bandalg_core <- function(entries, N, k) {
     .Call(`_DyadiCarma_rcpp_bandalg_core`, entries, N, k)
 }
 
-rcpp_constr <- function(height, breadth, distr, param) {
-    .Call(`_DyadiCarma_rcpp_constr`, height, breadth, distr, param)
+rcpp_constr <- function(N, k, distr, param) {
+    .Call(`_DyadiCarma_rcpp_constr`, N, k, distr, param)
 }
 
 rcpp_dyadFac_core <- function(entries, N, k) {

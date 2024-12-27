@@ -34,7 +34,7 @@ in the case of the \code{symm} type with random entries the object represents a 
 }
 \section{References}{
 
-Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
+Kos, M., Podgórski, K., & Wu, H. (2024). Efficient inversion of sparse positive definite matrices through a dyadic factorization. Manuscript in preparation.
 }
 
 \examples{

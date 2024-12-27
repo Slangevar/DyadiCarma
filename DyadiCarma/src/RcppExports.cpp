@@ -206,16 +206,16 @@ BEGIN_RCPP
 END_RCPP
 }
 // rcpp_constr
-List rcpp_constr(int height, int breadth, String distr, NumericVector param);
-RcppExport SEXP _DyadiCarma_rcpp_constr(SEXP heightSEXP, SEXP breadthSEXP, SEXP distrSEXP, SEXP paramSEXP) {
+List rcpp_constr(int N, int k, String distr, NumericVector param);
+RcppExport SEXP _DyadiCarma_rcpp_constr(SEXP NSEXP, SEXP kSEXP, SEXP distrSEXP, SEXP paramSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type height(heightSEXP);
-    Rcpp::traits::input_parameter< int >::type breadth(breadthSEXP);
+    Rcpp::traits::input_parameter< int >::type N(NSEXP);
+    Rcpp::traits::input_parameter< int >::type k(kSEXP);
     Rcpp::traits::input_parameter< String >::type distr(distrSEXP);
     Rcpp::traits::input_parameter< NumericVector >::type param(paramSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_constr(height, breadth, distr, param));
+    rcpp_result_gen = Rcpp::wrap(rcpp_constr(N, k, distr, param));
     return rcpp_result_gen;
 END_RCPP
 }

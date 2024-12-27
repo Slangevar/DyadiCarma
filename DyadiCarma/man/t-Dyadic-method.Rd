@@ -20,7 +20,7 @@ The operations are performed in a way that is consistent with the dyadic structu
 }
 \section{References}{
 
-Kos, M., Podg\eqn{\mbox{\'o}}{o}rski, K., Wu, H. (2024) "Sparse"
+Kos, M., Podgórski, K., & Wu, H. (2024). Efficient inversion of sparse positive definite matrices through a dyadic factorization. Manuscript in preparation.
 }
 
 \examples{
@@ -36,12 +36,11 @@ V <- construct(N, k, type = "vert") # vertical
 H <- construct(N, k, type = "horiz") # horizontal
 S <- construct(N, k, type = "symm", distr = "unif") # symmetric
 
+t(V)@type # The transpose of a vertical dyadic matrix is horizontal
+t(H)@type # The transpose of a horizontal dyadic matrix is vertical
 
-V@type
-H@type
-t(H)@type
-as.matrix(S)
-as.matrix(t(S))
+as.matrix(t(V)) == t(as.matrix(V)) # Should be TRUE
+as.matrix(S) == as.matrix(t(S)) # Should be TRUE
 }
 \seealso{
 \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;

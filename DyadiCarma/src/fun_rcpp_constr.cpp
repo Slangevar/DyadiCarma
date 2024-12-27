@@ -13,26 +13,23 @@
 // @details The function constructs a generic list for \code{Dyadic}-object of
 // any type.
 
-#include <Rcpp.h>
-// #include <math.h> // Included to get `pow(,)' function (as it turns out it is
-// not needed) #include <stdio.h>
-using namespace Rcpp;
+#include "fun_aux.h"
+
+// using namespace Rcpp;
 
 // [[Rcpp::export]]
-List rcpp_constr(int height, int breadth, String distr, NumericVector param) {
-    List EE(height);
-    // Building 'entries'n
-    for (int l = 0; l < height; l++) {
-        int rows = (pow(2, l + 1) - 1) * breadth;  // (2^(l+1)-1) * breadth
-        int cols =
-            pow(2, height - l - 1) * breadth;  // (2^(height-l-1) * breadth
+List rcpp_constr(int N, int k, String distr, NumericVector param) {
+    List EE(N);
+    // Building 'entries'
+    for (int i = 0; i < N; i++) {
+        int rows = ((1 << (i + 1)) - 1) * k;  // (2^(l+1)-1) * breadth
+        int cols = (1 << (N - i - 1)) * k;    // (2^(height-l-1) * breadth
         NumericVector v(rows * cols, 1.0);
         if (distr == "norm") {
             v = rnorm(rows * cols, param[0], param[1]);
         } else {
             if (distr == "binom") {
                 v = rbinom(rows * cols, param[0], param[1]);
-                ;
             } else {
                 if (distr == "unif") {
                     v = runif(rows * cols, param[0], param[1]);
@@ -42,7 +39,7 @@ List rcpp_constr(int height, int breadth, String distr, NumericVector param) {
         v.attr("dim") = Dimension(rows, cols);
         // NumericMatrix v = as<NumericMatrix>(v);// If one wants v to be the
         // matrix within C++
-        EE[l] =
+        EE[i] =
             v;  // Attribute is sufficient if one wants to export a matrix to R
     }
     return (EE);
