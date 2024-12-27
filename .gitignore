@@ -5,4 +5,5 @@
 **/.vscode
 **/.DS_Store
 .Rproj.user
+**/.Rd2pdf*/
 **/DyadiCarma.Rproj
