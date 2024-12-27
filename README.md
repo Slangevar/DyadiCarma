@@ -1,5 +1,12 @@
 # DyadiCarma
 
-## Configuration of the NAMESPACE
+An efficient R package for working with dyadic matrices, implemented using Rcpp and RcppArmadillo. The package provides basic arithmetic and matrix operations for dyadic matrices and implements a fast dyadic algorithm that exploits the dyadic (or band) structure of specific matrices. This enables efficient factorization and inversion of dyadic matrices, offering a powerful tool for computational applications involving sparse positive definite matrices.
 
-It may not be a good pratice to use `exportPattern("^[[:alpha:]]+"` in the NAMESPACE file since it will export everything, including C++ auxiliary functions that we want to hide. It is better to configure the NAMESPACE file manually to control what functions to export. If we remove the comment on the first line of the NAMESPACE file, then roxygen2 will not modify it in later compilation.
+**Bibliography**
+
+Kos, M., Podgórski, K., & Wu, H. (2024). Efficient inversion of sparse positive definite matrices through a dyadic factorization. Manuscript in preparation.
+
+**Authors**
+
+- Hanqing Wu (Maintainer)
+- Krzysztof Podgórski

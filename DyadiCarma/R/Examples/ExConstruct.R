@@ -30,4 +30,4 @@ AS@aentries[[2]]
 # Truly asymmetric
 AS <- construct(N, k, type = "asymm", distr = "unif")
 AS@entries[[2]] # The second bottom level entries
-AS@aentries[[2]] # The asymmetric (which is also symmetric in this case)
+AS@aentries[[2]] # The second bottom level asymmetric entries

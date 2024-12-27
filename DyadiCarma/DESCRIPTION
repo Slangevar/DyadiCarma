@@ -1,5 +1,5 @@
 Package: DyadiCarma
-Date: 2024-12-25
+Date: 2024-12-27
 Type: Package
 Title: Dyadic matrices and their algebra using Rcpp and RcppArmadillo
 Version: 0.1

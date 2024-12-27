@@ -27,7 +27,9 @@ max(abs(I1 - I)) # Should be trivially small
 iS <- dyadFac(S, inv = TRUE)
 I2 <- iS %*% matS
 max(abs(I2 - I)) # Should be trivially small
-
+iS_solve <- solve(matS)
+I3 <- iS_solve %*% matS
+max(abs(I3 - I)) # The result obtained using built-in method for inversion
 
 #-------------------------------------------------------------#
 #-----------------Inverting a PD band matrix------------------#

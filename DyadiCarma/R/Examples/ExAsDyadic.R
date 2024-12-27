@@ -39,8 +39,8 @@ mat1AS <- t(mat2) %*% mat1 # An asymmetrically dyadic matrix
 S <- as.dyadic(mat1S, "symm", N, k) # A "symm" dyadic object
 AS <- as.dyadic(mat1AS, "asymm", N, k) # A "asymm" dyadic object
 
-max(abs(as.matrix(S) - mat1S)) # Should be 0.
-max(abs(as.matrix(AS) - mat1AS)) # Should be 0.
+all(as.matrix(S) == mat1S) # Should be TRUE.
+all(as.matrix(AS) == mat1AS) # Should be TRUE.
 
 
 #-------------------------------------------------------------#
@@ -51,4 +51,4 @@ mat3 <- diag(d + 5)
 mat3[1:d, 1:d] <- mat1
 
 V3 <- as.dyadic(mat3, "vert", N, k) # Extract the upper-left dxd dyadic sub-matrix
-max(abs(as.matrix(V3) - mat1)) # Should be 0.
+all(as.matrix(V3) == mat1) # Should be TRUE.

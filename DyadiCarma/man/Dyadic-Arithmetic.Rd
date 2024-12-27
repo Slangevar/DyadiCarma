@@ -45,7 +45,7 @@ AS <- construct(N, k, type = "asymm") # asymmetric
 # Negation of dyadic objects (matrices)
 NegV <- -V
 NegV@type
-as.matrix(NegV) == -as.matrix(V) # Should be TRUE
+all(as.matrix(NegV) == -as.matrix(V)) # Should be TRUE
 
 # Addition of dyadic objects (matrices)
 HpV <- H + V # horizontal + vertical = asymmetric
@@ -60,11 +60,12 @@ DoubleV <- 2 * V # Scalar multiplication does not change the type
 VDouble <- V * 2 # Scalar multiplication does not change the type
 DoubleV@type
 VDouble@type
-as.matrix(DoubleV) == 2 * as.matrix(V) # Should be TRUE
-as.matrix(VDouble) == as.matrix(VDouble) # Should be TRUE
+all(as.matrix(DoubleV) == 2 * as.matrix(V)) # Should be TRUE
+all(as.matrix(VDouble) == as.matrix(VDouble)) # Should be TRUE
 
 # Linear combination
 linearComb <- -S + 3 * H - 6 * AS + V # linear combination of dyadic matrices
+linearComb@type # "asymm"
 }
 \seealso{
 \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;

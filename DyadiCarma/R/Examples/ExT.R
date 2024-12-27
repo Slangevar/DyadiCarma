@@ -13,5 +13,5 @@ S <- construct(N, k, type = "symm", distr = "unif") # symmetric
 t(V)@type # The transpose of a vertical dyadic matrix is horizontal
 t(H)@type # The transpose of a horizontal dyadic matrix is vertical
 
-as.matrix(t(V)) == t(as.matrix(V)) # Should be TRUE
-as.matrix(S) == as.matrix(t(S)) # Should be TRUE
+all(as.matrix(t(V)) == t(as.matrix(V))) # Should be TRUE
+all(as.matrix(S) == as.matrix(t(S))) # Should be TRUE
