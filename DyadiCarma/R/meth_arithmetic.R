@@ -13,11 +13,9 @@
 #'
 #' @inheritSection Dyadic-class References
 #'
-#'
-#'
 #' @seealso
 #' \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;
-#' \code{\link{AsMatrix}} for extracting the matrix representation
+#' \code{\link[DyadiCarma]{as.matrix}} for extracting the matrix representation
 #' of a \code{Dyadic}-object
 #'
 #' @example R/Examples/ExArithmetic.R
@@ -103,7 +101,6 @@ setMethod(
 
 # Define negation
 #' @rdname Dyadic-Arithmetic
-#' @aliases -,Dyadic-method
 #' @usage NULL
 #' @export
 setMethod(

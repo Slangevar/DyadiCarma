@@ -7,7 +7,6 @@
 \alias{*,Dyadic,numeric-method}
 \alias{*,numeric,Dyadic-method}
 \alias{-,Dyadic,ANY-method}
-\alias{-,Dyadic-method}
 \title{Arithmetic methods for Dyadic objects}
 \description{
 Implements arithmetic operations for Dyadic objects, including negation,
@@ -61,7 +60,7 @@ VDouble <- V * 2 # Scalar multiplication does not change the type
 DoubleV@type
 VDouble@type
 all(as.matrix(DoubleV) == 2 * as.matrix(V)) # Should be TRUE
-all(as.matrix(VDouble) == as.matrix(VDouble)) # Should be TRUE
+all(as.matrix(VDouble) == as.matrix(DoubleV)) # Should be TRUE
 
 # Linear combination
 linearComb <- -S + 3 * H - 6 * AS + V # linear combination of dyadic matrices
@@ -69,6 +68,6 @@ linearComb@type # "asymm"
 }
 \seealso{
 \code{\link{Dyadic-class}} for the definition of the \code{Dyadic}-class;
-\code{\link{AsMatrix}} for extracting the matrix representation
+\code{\link[DyadiCarma]{as.matrix}} for extracting the matrix representation
 of a \code{Dyadic}-object
 }

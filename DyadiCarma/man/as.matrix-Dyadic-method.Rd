@@ -2,6 +2,7 @@
 % Please edit documentation in R/meth_as_matrix.R
 \name{as.matrix,Dyadic-method}
 \alias{as.matrix,Dyadic-method}
+\alias{as.matrix}
 \title{Matrix representation of dyadic objects}
 \usage{
 \S4method{as.matrix}{Dyadic}(x)

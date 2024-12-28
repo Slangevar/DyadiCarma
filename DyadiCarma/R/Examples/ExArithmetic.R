@@ -30,7 +30,7 @@ VDouble <- V * 2 # Scalar multiplication does not change the type
 DoubleV@type
 VDouble@type
 all(as.matrix(DoubleV) == 2 * as.matrix(V)) # Should be TRUE
-all(as.matrix(VDouble) == as.matrix(VDouble)) # Should be TRUE
+all(as.matrix(VDouble) == as.matrix(DoubleV)) # Should be TRUE
 
 # Linear combination
 linearComb <- -S + 3 * H - 6 * AS + V # linear combination of dyadic matrices

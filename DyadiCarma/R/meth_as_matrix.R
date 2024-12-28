@@ -3,6 +3,7 @@
 #' @description Extracting the matrix representation
 #' of a \code{Dyadic}-object.
 #' @param x \code{Dyadic}-object.
+#' @aliases as.matrix
 #' @return The result is a \code{width*(2^height-1) x width*(2^height-1)} matrix.
 #' @details The dyadic structure contains information about the type of matrix and its width and height.
 #' @export
@@ -13,7 +14,6 @@
 #' \code{\link{dyadFac}} for the dyadic decomposition of dyadic matrices;
 #'
 #' @example R/Examples/ExAsMatrix.R
-#'
 #'
 #' @export
 #'

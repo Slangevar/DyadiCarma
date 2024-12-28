@@ -29,4 +29,4 @@ DD
 
 # The classic R matrix representation of DD.
 mat_DD <- as.matrix(DD)
-View(mat_DD)
+mat_DD
