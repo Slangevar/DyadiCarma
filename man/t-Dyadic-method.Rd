@@ -20,7 +20,7 @@ The operations are performed in a way that is consistent with the dyadic structu
 }
 \section{References}{
 
-Kos, M., Podgórski, K., & Wu, H. (2024). Efficient inversion of sparse positive definite matrices through a dyadic factorization. Manuscript in preparation.
+Kos, M., Podgórski, K., & Wu, H. (2025). Dyadic Factorization and Efficient Inversion of Sparse Positive Definite Matrices. arXiv. https://arxiv.org/abs/2505.08144
 }
 
 \examples{
