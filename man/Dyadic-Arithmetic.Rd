@@ -8,6 +8,10 @@
 \alias{*,numeric,Dyadic-method}
 \alias{-,Dyadic,ANY-method}
 \title{Arithmetic methods for Dyadic objects}
+\value{
+A Dyadic object representing the corresponding result of the
+arithmetic operation.
+}
 \description{
 Implements arithmetic operations for Dyadic objects, including negation,
 addition, subtraction, and scalar multiplication.

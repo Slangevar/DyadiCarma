@@ -1,6 +1,6 @@
-#' @title Construction of a \code{Dyadic} object
+#' @title Transpose of a \code{Dyadic} object
 #'
-#' @description The \code{Dyadic} object transpose of a \code{Dyadic} object: \code{(t(Dyadic)}.
+#' @description The \code{Dyadic} object transpose of a \code{Dyadic} object: \code{t(Dyadic)}.
 #' @param x \code{Dyadic}-object;
 #' @return The \code{Dyadic}-object that is the result of the operation with properly defined fields.
 #' @details The operations are performed in a way that is consistent with the dyadic structure of the matrices.

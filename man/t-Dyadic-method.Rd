@@ -2,7 +2,7 @@
 % Please edit documentation in R/meth_t.R
 \name{t,Dyadic-method}
 \alias{t,Dyadic-method}
-\title{Construction of a \code{Dyadic} object}
+\title{Transpose of a \code{Dyadic} object}
 \usage{
 \S4method{t}{Dyadic}(x)
 }
@@ -13,7 +13,7 @@
 The \code{Dyadic}-object that is the result of the operation with properly defined fields.
 }
 \description{
-The \code{Dyadic} object transpose of a \code{Dyadic} object: \code{(t(Dyadic)}.
+The \code{Dyadic} object transpose of a \code{Dyadic} object: \code{t(Dyadic)}.
 }
 \details{
 The operations are performed in a way that is consistent with the dyadic structure of the matrices.

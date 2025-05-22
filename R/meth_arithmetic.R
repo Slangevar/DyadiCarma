@@ -11,6 +11,9 @@
 #'   \item{`*'}{Multiplies a Dyadic object by a scalar or vice versa.}
 #' }
 #'
+#' @return A Dyadic object representing the corresponding result of the
+#' arithmetic operation.
+#'
 #' @inheritSection Dyadic-class References
 #'
 #' @seealso
