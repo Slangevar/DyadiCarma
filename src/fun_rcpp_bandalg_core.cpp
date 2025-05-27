@@ -94,10 +94,13 @@ List rcpp_bandalg_core(List entries, int N, int k) {
                     tmp_matrices[i].submat(right_cen * k, j * k,
                                            (right_cen + 1) * k - 1,
                                            (j + 1) * k - 1);
-                left_cen += (1 << (m - 1));
-                right_cen -= (1 << (m - 1));
-                left_col = 2 * left_col + 1;
-                right_col = 2 * right_col;
+                // Update the center.
+                if (m > 0) {
+                    left_cen += (1 << (m - 1));
+                    right_cen -= (1 << (m - 1));
+                    left_col = 2 * left_col + 1;
+                    right_col = 2 * right_col;
+                }
             }
         }
 
@@ -129,8 +132,11 @@ List rcpp_bandalg_core(List entries, int N, int k) {
                         tmp_matrices[i].submat(right_cen * k, j * k,
                                                (right_cen + 1) * k - 1,
                                                (j + 1) * k - 1);
-                left_cen += (1 << (m - 1));
-                right_cen -= (1 << (m - 1));
+                // Update the center.
+                if (m > 0) {
+                    left_cen += (1 << (m - 1));
+                    right_cen -= (1 << (m - 1));
+                }
             }
         }
 
