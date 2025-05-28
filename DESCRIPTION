@@ -1,8 +1,8 @@
 Package: DyadiCarma
-Date: 2025-05-22
+Date: 2025-05-27
 Type: Package
 Title: Dyadic Matrices and their Algebra using 'Rcpp' and 'RcppArmadillo'
-Version: 1.0
+Version: 1.0.1
 Authors@R: c(person("Michal", "Kos", role = "aut",email = "Michal.Kos@stat.lu.se"), person("Krzysztof", "Podgorski", role = c("aut","cph"), email = "Krzysztof.Podgorski@stat.lu.se"),person("Hanqing", "Wu", role = c("aut","cre"), email = "Hanqing.Wu@stat.lu.se"))
 Description: Provides methods for efficient algebraic operations and factorization of dyadic matrices using 'Rcpp' and 'RcppArmadillo'. The details of dyadic matrices and the corresponding methodology are described in Kos, M., Podgórski, K., and Wu, H. (2025) <doi:10.48550/arXiv.2505.08144>.
 Depends: R (>= 4.0.0), methods
